@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="empleados_Temp">
+        <item>@string/empleado1</item>
+        <item>@string/empleado2</item>
+        <item>@string/empleado3</item>
+        <item>@string/empleado4</item>
+        <item>@string/empleado5</item>
+        <item>@string/empleado6</item>
+        <item>@string/empleado7</item>
+        <item>@string/empleado8</item>
+        <item>@string/empleado9</item>
+        <item>@string/empleado10</item>
+        <item>@string/empleado11</item>
+        <item>@string/empleado12</item>
+        <item>@string/empleado13</item>
+        <item>@string/empleado14</item>
+    </string-array>
+</resources>
+
+
+

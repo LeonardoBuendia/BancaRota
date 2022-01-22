@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.buendiasoftware.bancarota.MainActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="220dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="?android:attr/colorFocusedHighlight"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:layout_constraintBottom_toBottomOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="192dp"
+        android:layout_height="27dp"
+        android:background="?android:attr/colorPressedHighlight"
+        android:backgroundTint="@android:color/holo_orange_dark"
+        android:text="@string/mainText"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.202" />
+
+
+    <Spinner
+        android:id="@+id/spinnerEmpleados"
+        android:layout_width="248dp"
+        android:layout_height="29dp"
+
+        android:layout_marginTop="232dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.041" />
+
+
+    <Button
+        android:id="@+id/buttonPonchar"
+        android:layout_width="210dp"
+        android:layout_height="wrap_content"
+        android:onClick="sendMessage"
+        android:text="@string/button_send"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reloj"
+        app:layout_constraintVertical_bias="0.243" />
+
+    <Button
+        android:id="@+id/buttonCargar"
+        android:layout_width="210dp"
+        android:layout_height="wrap_content"
+        android:onClick="cargar"
+        android:text="Cargar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reloj"
+        app:layout_constraintVertical_bias="0.079" />
+
+
+    <TextClock
+        android:id="@+id/reloj"
+        android:layout_width="260dp"
+        android:layout_height="120dp"
+        android:format12Hour="@null"
+        android:format24Hour="HH:mm:ss"
+        android:textSize="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/my_toolbar"
+        app:layout_constraintVertical_bias="0.394" />
+
+    <TableLayout
+        android:layout_width="523dp"
+        android:layout_height="112dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.559"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonPonchar"
+        app:layout_constraintVertical_bias="0.24">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+
+                android:id="@+id/Nombre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#b0b0b0"
+                android:padding="18dip"
+                android:text="Nombre"
+                android:textColor="#000"
+                android:textSize="12dp" />
+
+            <TextView
+
+                android:id="@+id/Entrada"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#DFC700"
+                android:padding="18dip"
+                android:text="Entrada"
+                android:textColor="#000"
+                android:textSize="14dp" />
+
+            <TextView
+
+                android:id="@+id/BreakSal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#b0b0b0"
+                android:padding="18dip"
+                android:text="BreakS"
+                android:textColor="#000"
+                android:textSize="12dp" />
+
+            <TextView
+
+                android:id="@+id/BreakReg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#DFC700"
+                android:padding="18dip"
+                android:text="BreakR"
+                android:textColor="#000"
+                android:textSize="14dp" />
+
+            <TextView
+
+                android:id="@+id/Salida"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#b0b0b0"
+                android:padding="18dip"
+                android:text="Salida"
+                android:textColor="#000"
+                android:textSize="12dp" />
+
+            <TextView
+
+                android:id="@+id/Fecha1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#DFC700"
+                android:padding="18dip"
+                android:text="Fecha"
+                android:textColor="#000"
+                android:textSize="14dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/nombreEmpleado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#ff9922"
+                android:padding="18dip"
+                android:text="$ variable"
+                android:textColor="#000"
+                android:textSize="14dp" />
+            <TextView
+
+                android:id="@+id/entradaEmpleado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#b0b0b0"
+                android:padding="18dip"
+                android:text="$ variable"
+                android:textColor="#000"
+                android:textSize="12dp" />
+            <TextView
+
+                android:id="@+id/break1Empleado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#ff9922"
+                android:padding="18dip"
+                android:text="$ variable"
+                android:textColor="#000"
+                android:textSize="12dp" />
+            <TextView
+
+                android:id="@+id/break2Empleado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#b0b0b0"
+                android:padding="18dip"
+                android:text="$ variable"
+                android:textColor="#000"
+                android:textSize="12dp" />
+            <TextView
+
+                android:id="@+id/salidaEmpleado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#ff9922"
+                android:padding="18dip"
+                android:text="$ variable"
+                android:textColor="#000"
+                android:textSize="12dp" />
+            <TextView
+
+                android:id="@+id/fecha2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#b0b0b0"
+                android:padding="18dip"
+                android:text="$ variable"
+                android:textColor="#000"
+                android:textSize="12dp" />
+        </TableRow>
+    </TableLayout>
+</android.support.constraint.ConstraintLayout>
